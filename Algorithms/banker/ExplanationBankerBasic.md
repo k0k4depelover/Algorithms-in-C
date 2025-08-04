@@ -57,8 +57,8 @@ NEED = MAX - ALLOC
 ```
 ### Funciones Auxiliares
 Puedes omitir esta parte.
-Aca muestro soluciones para mostrar un vector junto con una etiqueta:
-
+#### mostrarVector
+Aca muestro soluciones para mostrar un vector junto con una etiqueta, esto es util si queremos visualizar el estado de un proceso:
 ```
 void mostrarVector(const Vec& v, const string& nombre){
   std:: cout<< nombre<< ": ";
