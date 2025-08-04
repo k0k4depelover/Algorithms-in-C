@@ -54,5 +54,21 @@ AVAILABLE = [3, 3, 2]
 
 NEED = MAX - ALLOC
 
+```
+### Funciones Auxiliares
+Puedes omitir esta parte.
+Aca muestro soluciones para mostrar un vector junto con una etiqueta:
 
-### Fun
+```
+void mostrarVector(const Vec& v, const string& nombre){
+  std:: cout<< nombre<< ": ";
+  for(int x in v){
+  std::cout<< x << " ";
+}
+  cout<< " \n"
+}
+```
+Donde *Vec&* es un vector, *string&* es el nombre del proceso.
+
+
+
