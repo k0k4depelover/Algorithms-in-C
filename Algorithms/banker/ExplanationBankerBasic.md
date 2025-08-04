@@ -56,8 +56,8 @@ NEED = MAX - ALLOC
 
 ```
 ### Funciones Auxiliares
-Puedes omitir esta parte.
-#### mostrarVector
+**Puedes omitir esta parte.**
+#### mostrarVector()
 Aca muestro soluciones para mostrar un vector junto con una etiqueta, esto es util si queremos visualizar el estado de un proceso:
 ```
 void mostrarVector(const Vec& v, const string& nombre){
@@ -70,5 +70,31 @@ void mostrarVector(const Vec& v, const string& nombre){
 ```
 Donde *Vec&* es un vector, *string&* es el nombre del proceso.
 
+### mostrarEstado()
+Con esta función podremos visualizar el estado general de nuestro sistema, con los recursos maximos por proceso, los recursos en uso y los recursos necesarios para terminar el proceso.
+```
+void mostrarEstado(const Mat& max, const Mat& alloc,
+                    const Mat& need, const Vec& avail) {
+    int n= max.size(), m= avail.size();                    
+    std::cout << "\n=== ESTADO ===\n";
+    std::cout << "Proceso |   Max   | Allocation |  Need  \n";
+    std::cout << "-----------------------------------------\n";
+    for(int =0; i<n; i++0){
+        std:cout<< "P" << i << std::setw(6) << "| ";
+        for(int j=0; j<m; j++){
+            std:: cout<< max[i][j] <<" ";
+        }
+        for(int j=0; j<m; j++){
+            std:: cout<< alloc[i][j] <<" ";
+        }
+        for (int j=0; j<m; j++){
+            std:: cout<< need[i][j] <<" ";
+        }
+    }
+    for(int j=0; j<m; j++){
+        std:: cout<< avail[j] <<" ";
+    }
+    std::cout << '-----------------\n';
+}
 
-
+```
